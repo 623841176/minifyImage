@@ -1,4 +1,4 @@
-import changeImage from './minifyImage.js'
+export {changeImage} from './minifyImage.js'
 var $prev = document.querySelector("#prev");
 var $picker = document.querySelector("#picker");
 

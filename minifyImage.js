@@ -1,4 +1,4 @@
-export default function changeImage(file, resWidth){//文件，缩小后宽度(px)
+function changeImage(file, resWidth){//文件，缩小后宽度(px)
   var reader = new FileReader();
   
   return new Promise(function (resolve, reject) {
@@ -54,4 +54,7 @@ export default function changeImage(file, resWidth){//文件，缩小后宽度(p
       resolve(file);
     }
   })
+}
+module.exports = {
+  changeImage: changeImage
 }
