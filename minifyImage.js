@@ -25,10 +25,9 @@ function changeImage(file, resWidth){//文件，缩小后宽度(px)
         var ctx = $canvas.getContext('2d');
         ctx.drawImage(image, x, y, width, height, 0, 0, width * (limitW / width), height * (limitW / width));
         
-        var data = $canvas.toDataURL();
+        var data = $canvas.toDataURL(file.type);
         data = data.split(',')[1];
         data = window.atob(data);
-        
         var ia = new Uint8Array(data.length);
         for (var i = 0; i < data.length; i++) {
             ia[i] = data.charCodeAt(i);
