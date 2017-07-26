@@ -10,7 +10,7 @@ export default function changeImage(file, resWidth){//文件，缩小后宽度(p
       image.onload = function() {
         
         var x = 0, y = 0, width = image.width, height = image.height;
-        var limitW = resWidth;
+        var limitW = resWidth || 375;
         if(resWidth >= width){
           resolve(file);
         }
