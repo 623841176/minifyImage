@@ -34,7 +34,9 @@ function changeImage(file, resWidth){//文件，缩小后宽度(px)
         };
 
         // var blob = new Blob([ia], {type:"image/png"});
-        var returnFile = new File([ia], file.name,{type:file.type})
+        // var returnFile = new File([ia], file.name,{type:file.type})
+        var returnFile = new Blob([ia],{type:file.type})
+        returnFile.lastModifiedDate = new Date();
         resolve(returnFile)
       }
       image.onerror = function(){
